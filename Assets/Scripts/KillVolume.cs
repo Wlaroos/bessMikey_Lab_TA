@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class KillVolume : MonoBehaviour
 {
@@ -16,16 +17,10 @@ public class KillVolume : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.SetActive(false);
-
-        if (_uiController != null)
+        CarController carController = other.attachedRigidbody.gameObject.GetComponent<CarController>();
+        if(carController != null)
         {
-            _uiController.ShowWinText(_killText);
-        }
-
-        if (_killSoundPrefab != null)
-        {
-            SoundPlayer.Instance.PlaySFX(_killSoundPrefab, transform.position);
+            carController.Die();
         }
     }
 }

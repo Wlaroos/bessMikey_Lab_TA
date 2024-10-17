@@ -16,10 +16,16 @@ public class WinVolume : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        CarController carController = other.attachedRigidbody.gameObject.GetComponent<CarController>();
-        if(carController != null)
+        other.gameObject.SetActive(false);
+
+        if (_uiController != null)
         {
-            carController.Die();
+            _uiController.ShowWinText(_winText);
+        }
+
+        if (_winSoundPrefab != null)
+        {
+            SoundPlayer.Instance.PlaySFX(_winSoundPrefab, transform.position);
         }
     }
 }
