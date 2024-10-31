@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winText: Wow, you actually did it!
   _winSoundPrefab: {fileID: 0}
+  _winParticlePrefab: {fileID: 3755619455472416163, guid: 08ed32778a59a6f40abb22243c074ba6, type: 3}

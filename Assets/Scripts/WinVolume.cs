@@ -6,6 +6,7 @@ public class WinVolume : MonoBehaviour
 {
     [SerializeField] private string _winText = "Wow, you actually did it!";
     [SerializeField] private AudioSource _winSoundPrefab;
+    [SerializeField] private ParticleSystem _winParticlePrefab;
 
     private UIController _uiController;
 
@@ -23,9 +24,15 @@ public class WinVolume : MonoBehaviour
             _uiController.ShowWinText(_winText);
         }
 
+        if (_winParticlePrefab != null)
+        {
+            ParticleSystem newParticle = Instantiate(_winParticlePrefab, other.transform.position, Quaternion.identity);
+            newParticle.Play();
+        }
+
         if (_winSoundPrefab != null)
         {
-            SoundPlayer.Instance.PlaySFX(_winSoundPrefab, transform.position);
+            SoundPlayer.Instance.PlaySFX(_winSoundPrefab, other.transform.position);
         }
     }
 }

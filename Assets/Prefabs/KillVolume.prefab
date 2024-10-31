@@ -110,5 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba185177913da8e45b2880ed5151b192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killText: Wow, you actually did it!
+  _killText: You died! :P
   _killSoundPrefab: {fileID: 0}
+  _killParticlePrefab: {fileID: 7162460254526968305, guid: b7fc75d88ccf71b4c868dc5360116541, type: 3}

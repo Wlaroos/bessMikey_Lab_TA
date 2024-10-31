@@ -7,6 +7,7 @@ public class KillVolume : MonoBehaviour
 {
     [SerializeField] private string _killText = "Wow, you actually did it!";
     [SerializeField] private AudioSource _killSoundPrefab;
+    [SerializeField] private ParticleSystem _killParticlePrefab;
 
     private UIController _uiController;
 
@@ -20,6 +21,18 @@ public class KillVolume : MonoBehaviour
         CarController carController = other.attachedRigidbody.gameObject.GetComponent<CarController>();
         if(carController != null)
         {
+
+            if (_killParticlePrefab != null)
+            {
+                ParticleSystem newParticle = Instantiate(_killParticlePrefab, other.transform.position, Quaternion.identity);
+                newParticle.Play();
+            }
+
+            if (_killSoundPrefab != null)
+            {
+                SoundPlayer.Instance.PlaySFX(_killSoundPrefab, other.transform.position);
+            }
+
             carController.Die();
         }
     }
