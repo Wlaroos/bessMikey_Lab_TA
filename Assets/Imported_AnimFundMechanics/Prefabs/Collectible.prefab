@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9507a2b10ea0d743ac03500560233b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoundPrefab: {fileID: 0}
+  collectSoundPrefab: {fileID: 5105422144325754354, guid: ba2cb10db91111f4ea3d3e3782995928, type: 3}
   collectParticlePrefab: {fileID: 4230806809707874756, guid: d650450c789943747a2cc2d319dcfd70, type: 3}
 --- !u!1 &3439981140775320140
 GameObject:

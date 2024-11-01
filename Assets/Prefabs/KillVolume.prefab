@@ -111,5 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _killText: You died! :P
-  _killSoundPrefab: {fileID: 0}
+  _killSoundPrefab: {fileID: 5082034892946342938, guid: ccee2f568cedee94f801ee9b779033df, type: 3}
+  _killSoundPrefab2: {fileID: 5094195026956518394, guid: c7af6c45481907345b06966afd1fe61d, type: 3}
   _killParticlePrefab: {fileID: 7162460254526968305, guid: b7fc75d88ccf71b4c868dc5360116541, type: 3}

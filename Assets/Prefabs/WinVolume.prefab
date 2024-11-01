@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _winText: Wow, you actually did it!
-  _winSoundPrefab: {fileID: 0}
+  _winSoundPrefab: {fileID: 8544355182329020169, guid: 394a429cb179185418842b67432898e3, type: 3}
   _winParticlePrefab: {fileID: 3755619455472416163, guid: 08ed32778a59a6f40abb22243c074ba6, type: 3}
